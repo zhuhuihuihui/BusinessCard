@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="232dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="张三"
+            android:id="@+id/cardNameShow"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="40dip"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="市场部总监"
+            android:id="@+id/cardPositionShow"
+            android:layout_toRightOf="@+id/cardNameShow"
+            android:layout_marginLeft="14dp"
+            android:layout_alignBottom="@+id/cardNameShow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="15338766829"
+            android:id="@+id/cardPhoneNumShow"
+            android:layout_below="@+id/cardNameShow"
+            android:layout_alignLeft="@+id/cardNameShow"
+            android:layout_marginTop="11dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="zhuhuihuihui@gmai.com"
+            android:id="@+id/cardEmailShow"
+            android:layout_below="@+id/cardPhoneNumShow"
+            android:layout_alignLeft="@+id/cardPhoneNumShow"
+            />
+
+        <ImageView
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:id="@+id/cardCompanyLogoShow"
+            android:layout_marginRight="13dp"
+            android:src="@drawable/my_default_logo"
+            android:layout_alignBottom="@+id/cardEmailShow"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="三个蛋有限公司"
+            android:id="@+id/cardCompanyNameShow"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/cardEmailShow"
+            android:layout_alignLeft="@+id/cardEmailShow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="杭州市滨江区南环路1号"
+            android:id="@+id/cardCompanyAddressShow"
+            android:layout_alignBottom="@+id/cardCompanyNameShow"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/cardCompanyNameShow"
+            android:layout_marginLeft="5dip"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"/>
+</LinearLayout>

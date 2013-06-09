@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Activity Label -->
+    <string name="activityLabel_welcome" >欢迎界面 </string>
+    <string name="activityLabel_login" >登陆界面 </string>
+    <string name="activityLabel_main" >主界面 </string>
+
+
+    <string name="app_name" >BusinessCard
+    </string>
+    <string name="action_settings" >Settings
+    </string>
+    <string name="hello_world" >Hello world!
+    </string>
+
+</resources>
