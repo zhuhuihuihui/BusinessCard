@@ -14,7 +14,7 @@
         android:id="@+id/fragment"
         tools:layout="@layout/cardview_layout"/>
 
-    <!--
+    <!-- xxx
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="238dp"
