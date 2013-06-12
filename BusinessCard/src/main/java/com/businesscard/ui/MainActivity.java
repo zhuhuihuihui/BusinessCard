@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+import android.widget.Toast;
 import com.businesscard.R;
 
 /**
@@ -14,7 +15,8 @@ import com.businesscard.R;
  */
 public class MainActivity extends FragmentActivity
 {
-
+    private static final long WAIT_TIME = 2000;
+    private long touchTime = 0;
 
     public void onCreate(Bundle savedInstanceState)
     {
@@ -27,6 +29,7 @@ public class MainActivity extends FragmentActivity
             public void onClick(View view)
             {
                 addFragmentToStack();
+                
             }
         });
 
@@ -47,6 +50,20 @@ public class MainActivity extends FragmentActivity
 
             }
         });
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        long currentTime = System.currentTimeMillis();
+        if((currentTime - touchTime) >= WAIT_TIME)
+        {
+            Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
+            touchTime = currentTime;
+        }else
+        {
+            finish();
+        }
     }
 
     void addFragmentToStack()

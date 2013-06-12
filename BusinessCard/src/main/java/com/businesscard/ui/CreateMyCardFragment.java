@@ -16,11 +16,15 @@ import com.businesscard.R;
 public class CreateMyCardFragment extends Fragment
 {
     int mNum;
+    private TextView cardNameShow = null;
+
+
     /**
      * Create a new instance of CountingFragment, providing "num"
      * as an argument.
      */
-    static CreateMyCardFragment newInstance(int num) {
+    static CreateMyCardFragment newInstance(int num)
+    {
         CreateMyCardFragment f = new CreateMyCardFragment();
 
         // Supply num input as an argument.
@@ -36,6 +40,8 @@ public class CreateMyCardFragment extends Fragment
     {
         super.onCreate(savedInstanceState);
         mNum = getArguments() != null ? getArguments().getInt("num") : 1;
+
+
     }
 
     @Override
