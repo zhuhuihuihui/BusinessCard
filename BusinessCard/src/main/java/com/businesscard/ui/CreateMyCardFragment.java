@@ -1,54 +1,65 @@
 package com.businesscard.ui;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 import com.businesscard.R;
+import com.businesscard.View.CardView;
 
 /**
  * 创建我的名片
  *
  * Created by Scott Zhu on 13-6-4.
  */
-public class CreateMyCardFragment extends Fragment
+public class CreateMyCardFragment extends FragmentActivity
 {
-    int mNum;
-    private TextView cardNameShow = null;
-
-
-    /**
-     * Create a new instance of CountingFragment, providing "num"
-     * as an argument.
-     */
-    static CreateMyCardFragment newInstance(int num)
-    {
-        CreateMyCardFragment f = new CreateMyCardFragment();
-
-        // Supply num input as an argument.
-        Bundle args = new Bundle();
-        args.putInt("num", num);
-        f.setArguments(args);
-        return f;
-    }
-
+    private CardView newCard = null;
+    private EditText cardNameEdit =null;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        mNum = getArguments() != null ? getArguments().getInt("num") : 1;
+        setContentView(R.layout.fragment_create_my_card);
+        //mNum = getArguments() != null ? getArguments().getInt("num") : 1;
 
+
+        newCard = (CardView) getSupportFragmentManager().findFragmentById(R.id.fragment);
+
+        cardNameEdit = (EditText) findViewById(R.id.cardNameEdit);
+        cardNameEdit.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3)
+            {
+                newCard.setCardNameShow(cardNameEdit.getText().toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
 
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
-        View v = inflater.inflate(R.layout.fragment_create_my_card, container, false);
 
-        return v;
+    @Override
+    public void onResume()
+    {
+        super.onResume();
     }
 }

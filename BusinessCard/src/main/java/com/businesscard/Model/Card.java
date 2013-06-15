@@ -8,7 +8,7 @@ package com.businesscard.Model;
 public class Card
 {
     /**名片唯一ID号*/
-    private String cardID;
+    private long cardID;
 
     private CardType cardType;
 
@@ -16,11 +16,26 @@ public class Card
 
     private Company company;
 
-    public String getCardID() {
+    public Card()
+    {
+        /**设置卡片的id，
+         * 后期这个id号应该从服务器获取，
+         * （card设置完成后，将参数上传服务器并获取返回的id号）
+         * 并和用户id，people id关联起来
+         * 这里暂时用系统时间替代
+         * */
+        setCardID(System.currentTimeMillis());
+        this.people = new People();
+        this.company = new Company();
+        setCardType(CardType.PERSONAL_WITH_COMPANY);
+
+    }
+
+    public long getCardID() {
         return cardID;
     }
 
-    public void setCardID(String cardID) {
+    public void setCardID(long cardID) {
         this.cardID = cardID;
     }
 

@@ -33,6 +33,11 @@
             android:label="@string/activityLabel_main" >
         </activity>
 
+        <activity
+            android:name=".ui.CreateMyCardFragment"
+            android:label="@string/activityLabel_main" >
+        </activity>
+
     </application>
 
 </manifest>

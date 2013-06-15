@@ -6,17 +6,24 @@ package com.businesscard.Model;
 public class People
 {
 
-    private String peopleId;
+    private long peopleId;
     private String phoneNum;
     private String name;
     private String position;
     private String email;
 
-    public String getPeopleId() {
+    public People()
+    {
+        /**后期换成从服务器获取*/
+        setPeopleId(System.currentTimeMillis());
+
+    }
+
+    public long getPeopleId() {
         return peopleId;
     }
 
-    public void setPeopleId(String peopleId) {
+    public void setPeopleId(long peopleId) {
         this.peopleId = peopleId;
     }
 

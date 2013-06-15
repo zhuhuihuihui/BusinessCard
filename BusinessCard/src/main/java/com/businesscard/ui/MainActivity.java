@@ -1,5 +1,6 @@
 package com.businesscard.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -28,7 +29,8 @@ public class MainActivity extends FragmentActivity
             @Override
             public void onClick(View view)
             {
-                addFragmentToStack();
+                Intent toCreateMyCardActivity = new Intent(MainActivity.this, CreateMyCardFragment.class);
+                startActivity(toCreateMyCardActivity);
                 
             }
         });
@@ -66,13 +68,13 @@ public class MainActivity extends FragmentActivity
         }
     }
 
-    void addFragmentToStack()
-    {
-        Fragment newFragment = CreateMyCardFragment.newInstance(1);
-        FragmentTransaction ft = this.getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.main_create_my_card_fragment, newFragment);
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        ft.commit();
-    }
+//    void addFragmentToStack()
+//    {
+//        Fragment newFragment = CreateMyCardFragment.newInstance(1);
+//        FragmentTransaction ft = this.getSupportFragmentManager().beginTransaction();
+//        ft.replace(R.id.main_create_my_card_fragment, newFragment);
+//        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+//        ft.commit();
+//    }
 
 }

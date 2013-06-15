@@ -7,7 +7,7 @@ public class Company
 {
 
 
-    private String companyID;
+    private long companyID;
     private String companyName;
     private String department;
     private String address;
@@ -16,12 +16,17 @@ public class Company
     private String webSite;
     private String email;
 
+    public Company()
+    {
+        /**后期换成从服务器获取*/
+        setCompanyID(System.currentTimeMillis());
+    }
 
-    public String getCompanyID() {
+    public long getCompanyID() {
         return companyID;
     }
 
-    public void setCompanyID(String companyID) {
+    public void setCompanyID(long companyID) {
         this.companyID = companyID;
     }
 
