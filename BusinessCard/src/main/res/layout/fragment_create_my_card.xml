@@ -227,11 +227,11 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/cardPhoneNumEdit"
                     android:hint="请输入您的手机号码"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:inputType="phone"/>
 
                 <Button
                     android:layout_width="wrap_content"
@@ -265,7 +265,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:inputType="textPersonName"
+                    android:inputType="textEmailAddress"
                     android:ems="10"
                     android:id="@+id/cardEmailEdit"
                     android:hint="请输入您的邮箱"
@@ -277,6 +277,130 @@
                     android:text="确定"
                     android:id="@+id/cardPositionEdit"
                     android:layout_marginRight="10dip"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:background="#80cb1f"
+                android:gravity="center_vertical|center_horizontal"
+                >
+
+                <!--后期这些字段的提示，都用图片代替文字（imageView代替Textview）-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="公司名称："
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/cardCompanyNameEdit"
+                    android:hint="请输入您的公司名称"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:background="#80cb1f"
+                android:gravity="center_vertical|center_horizontal"
+                >
+
+                <!--后期这些字段的提示，都用图片代替文字（imageView代替Textview）-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="公司地址："
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/cardCompanyAddressEdit"
+                    android:hint="请输入公司地址"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:background="#80cb1f"
+                android:gravity="center_vertical|center_horizontal"
+                >
+
+                <!--后期这些字段的提示，都用图片代替文字（imageView代替Textview）-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="公司电话："
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/cardNameEdit"
+                    android:hint="请输入公司联系电话"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:background="#80cb1f"
+                android:gravity="center_vertical|center_horizontal"
+                >
+
+                <!--后期这些字段的提示，都用图片代替文字（imageView代替Textview）-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="姓名："
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/cardNameEdit"
+                    android:hint="请输入您的姓名"
+                    android:layout_weight="1"/>
 
             </LinearLayout>
 

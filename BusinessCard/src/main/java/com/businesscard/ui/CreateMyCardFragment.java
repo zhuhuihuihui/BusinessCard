@@ -20,9 +20,23 @@ import com.businesscard.View.CardView;
  *
  * Created by Scott Zhu on 13-6-4.
  */
-public class CreateMyCardFragment extends FragmentActivity
+public class CreateMyCardFragment extends FragmentActivity implements TextWatcher
 {
     private CardView newCard = null;
+    private EditText cardNameEdit =null;
+
+    private EditText cardNameEdit =null;
+
+    private EditText cardNameEdit =null;
+
+    private EditText cardNameEdit =null;
+
+    private EditText cardNameEdit =null;
+
+    private EditText cardNameEdit =null;
+
+    private EditText cardNameEdit =null;
+
     private EditText cardNameEdit =null;
 
     @Override
@@ -54,6 +68,8 @@ public class CreateMyCardFragment extends FragmentActivity
             }
         });
 
+
+
     }
 
 
@@ -61,5 +77,20 @@ public class CreateMyCardFragment extends FragmentActivity
     public void onResume()
     {
         super.onResume();
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable editable) {
+
     }
 }
