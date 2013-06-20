@@ -16,28 +16,31 @@ import com.businesscard.R;
 import com.businesscard.View.CardView;
 
 /**
- * ´´½¨ÎÒµÄÃûÆ¬
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½Æ¬
  *
  * Created by Scott Zhu on 13-6-4.
  */
 public class CreateMyCardFragment extends FragmentActivity implements TextWatcher
 {
     private CardView newCard = null;
-    private EditText cardNameEdit =null;
 
     private EditText cardNameEdit =null;
 
-    private EditText cardNameEdit =null;
+    private EditText cardPositionEdit =null;
 
-    private EditText cardNameEdit =null;
+    private EditText cardPhoneNumEdit =null;
 
-    private EditText cardNameEdit =null;
+    private EditText cardEmailEdit =null;
 
-    private EditText cardNameEdit =null;
+    private EditText cardCompanyNameEdit =null;
 
-    private EditText cardNameEdit =null;
+    private EditText cardCompanyAddressEdit =null;
 
-    private EditText cardNameEdit =null;
+    private EditText cardCompanyTelephoneEdit =null;
+
+    private EditText cardCompanyFaxEdit =null;
+
+    private EditText cardCompanyWebsiteEdit =null;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
