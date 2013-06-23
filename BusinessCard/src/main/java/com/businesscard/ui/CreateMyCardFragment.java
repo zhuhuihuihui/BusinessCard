@@ -14,33 +14,35 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.businesscard.R;
 import com.businesscard.View.CardView;
+import com.businesscard.View.EditTextWithTextListener;
+import com.businesscard.interfaces.EditTextListener;
 
 /**
  * �����ҵ���Ƭ
  *
  * Created by Scott Zhu on 13-6-4.
  */
-public class CreateMyCardFragment extends FragmentActivity implements TextWatcher
+public class CreateMyCardFragment extends FragmentActivity implements EditTextListener
 {
     private CardView newCard = null;
 
-    private EditText cardNameEdit =null;
+    private EditText cardNameEdit = null;
 
-    private EditText cardPositionEdit =null;
+    private EditTextWithTextListener cardPositionEdit = null;
 
-    private EditText cardPhoneNumEdit =null;
+    private EditText cardPhoneNumEdit = null;
 
-    private EditText cardEmailEdit =null;
+    private EditText cardEmailEdit = null;
 
-    private EditText cardCompanyNameEdit =null;
+    private EditText cardCompanyNameEdit = null;
 
-    private EditText cardCompanyAddressEdit =null;
+    private EditText cardCompanyAddressEdit = null;
 
-    private EditText cardCompanyTelephoneEdit =null;
+    private EditText cardCompanyTelephoneEdit = null;
 
-    private EditText cardCompanyFaxEdit =null;
+    private EditText cardCompanyFaxEdit = null;
 
-    private EditText cardCompanyWebsiteEdit =null;
+    private EditText cardCompanyWebsiteEdit = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -71,6 +73,8 @@ public class CreateMyCardFragment extends FragmentActivity implements TextWatche
             }
         });
 
+        cardPositionEdit = (EditTextWithTextListener) findViewById(R.id.cardPositionEdit);
+        cardPositionEdit.setOnEditTextListener(this);
 
 
     }
@@ -82,18 +86,9 @@ public class CreateMyCardFragment extends FragmentActivity implements TextWatche
         super.onResume();
     }
 
-    @Override
-    public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-
-    }
 
     @Override
-    public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-
-    }
-
-    @Override
-    public void afterTextChanged(Editable editable) {
+    public void textChanged(int id) {
 
     }
 }
