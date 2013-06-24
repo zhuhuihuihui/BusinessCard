@@ -13,6 +13,14 @@ public class EditTextWithTextListener extends EditText
 
     private EditTextListener myTextListener = null;
 
+    public EditTextWithTextListener(Context context) {
+        super(context);
+    }
+
+    public EditTextWithTextListener(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+    }
+
     public EditTextWithTextListener(Context context, AttributeSet attrs)
     {
         super(context, attrs);

@@ -199,7 +199,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:text="确定"
-                    android:id="@+id/cardPositionEdit"
                     android:layout_marginRight="10dip"/>
 
             </LinearLayout>
@@ -237,7 +236,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:text="确定"
-                    android:id="@+id/cardPositionEdit"
                     android:layout_marginRight="10dip"/>
 
             </LinearLayout>
@@ -275,7 +273,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:text="确定"
-                    android:id="@+id/cardPositionEdit"
                     android:layout_marginRight="10dip"/>
 
             </LinearLayout>

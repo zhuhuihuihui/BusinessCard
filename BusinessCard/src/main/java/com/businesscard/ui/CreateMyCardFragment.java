@@ -88,7 +88,15 @@ public class CreateMyCardFragment extends FragmentActivity implements EditTextLi
 
 
     @Override
-    public void textChanged(int id) {
-
+    public void textChanged(int id)
+    {
+        switch (id)
+        {
+            case R.id.cardPositionEdit:
+                newCard.setCardPositionShow(cardPositionEdit.getText().toString());
+                break;
+            default:
+                break;
+        }
     }
 }
