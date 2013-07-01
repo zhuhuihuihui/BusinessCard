@@ -186,7 +186,7 @@
                     android:layout_marginTop="10dip"
                     android:layout_marginBottom="10dip"/>
 
-                <EditText
+                <com.businesscard.View.EditTextWithTextListener
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:inputType="textPersonName"
@@ -195,11 +195,6 @@
                     android:hint="请输入您的职位"
                     android:layout_weight="1"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:text="确定"
-                    android:layout_marginRight="10dip"/>
 
             </LinearLayout>
 

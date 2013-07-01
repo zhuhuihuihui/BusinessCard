@@ -26,23 +26,23 @@ public class CreateMyCardFragment extends FragmentActivity implements EditTextLi
 {
     private CardView newCard = null;
 
-    private EditText cardNameEdit = null;
+    private EditTextWithTextListener cardNameEdit = null;
 
     private EditTextWithTextListener cardPositionEdit = null;
 
-    private EditText cardPhoneNumEdit = null;
+    private EditTextWithTextListener cardPhoneNumEdit = null;
 
-    private EditText cardEmailEdit = null;
+    private EditTextWithTextListener cardEmailEdit = null;
 
-    private EditText cardCompanyNameEdit = null;
+    private EditTextWithTextListener cardCompanyNameEdit = null;
 
-    private EditText cardCompanyAddressEdit = null;
+    private EditTextWithTextListener cardCompanyAddressEdit = null;
 
-    private EditText cardCompanyTelephoneEdit = null;
+    private EditTextWithTextListener cardCompanyTelephoneEdit = null;
 
-    private EditText cardCompanyFaxEdit = null;
+    private EditTextWithTextListener cardCompanyFaxEdit = null;
 
-    private EditText cardCompanyWebsiteEdit = null;
+    private EditTextWithTextListener cardCompanyWebsiteEdit = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -54,30 +54,34 @@ public class CreateMyCardFragment extends FragmentActivity implements EditTextLi
 
         newCard = (CardView) getSupportFragmentManager().findFragmentById(R.id.fragment);
 
-        cardNameEdit = (EditText) findViewById(R.id.cardNameEdit);
-        cardNameEdit.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3)
-            {
-                newCard.setCardNameShow(cardNameEdit.getText().toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
+        cardNameEdit = (EditTextWithTextListener) findViewById(R.id.cardNameEdit);
+        cardNameEdit.setOnEditTextListener(this);
 
         cardPositionEdit = (EditTextWithTextListener) findViewById(R.id.cardPositionEdit);
         cardPositionEdit.setOnEditTextListener(this);
 
+        cardPhoneNumEdit = (EditTextWithTextListener) findViewById(R.id.cardPhoneNumEdit);
+        cardPhoneNumEdit.setOnEditTextListener(this);
 
+        cardEmailEdit = (EditTextWithTextListener) findViewById(R.id.cardEmailEdit);
+        cardEmailEdit.setOnEditTextListener(this);
+
+        cardCompanyNameEdit = (EditTextWithTextListener) findViewById(R.id.cardCompanyNameEdit);
+        cardCompanyNameEdit.setOnEditTextListener(this);
+
+        cardCompanyAddressEdit = (EditTextWithTextListener) findViewById(R.id.cardCompanyAddressEdit);
+        cardCompanyAddressEdit.setOnEditTextListener(this);
+
+        cardCompanyTelephoneEdit = (EditTextWithTextListener) findViewById(R.id.cardCompanyTelephoneEdit);
+        cardCompanyTelephoneEdit.setOnEditTextListener(this);
+
+        cardCompanyFaxEdit = (EditTextWithTextListener) findViewById(R.id.cardCompanyFaxEdit);
+        cardCompanyFaxEdit.setOnEditTextListener(this);
+
+        cardCompanyWebsiteEdit = (EditTextWithTextListener) findViewById(R.id.cardCompanyFaxEdit);
+        cardCompanyWebsiteEdit.setOnEditTextListener(this);
     }
+
 
 
     @Override
@@ -92,8 +96,32 @@ public class CreateMyCardFragment extends FragmentActivity implements EditTextLi
     {
         switch (id)
         {
+            case R.id.cardNameEdit:
+                newCard.setCardNameShow(cardNameEdit.getText().toString());
+                break;
             case R.id.cardPositionEdit:
                 newCard.setCardPositionShow(cardPositionEdit.getText().toString());
+                break;
+            case R.id.cardPhoneNumEdit:
+                newCard.setCardPhoneNumShow(cardPhoneNumEdit.getText().toString());
+                break;
+            case R.id.cardEmailEdit:
+                newCard.setCardEmailShow(cardEmailEdit.getText().toString());
+                break;
+            case R.id.cardCompanyNameEdit:
+                newCard.setCardCompanyNameShow(cardCompanyNameEdit.getText().toString());
+                break;
+            case R.id.cardCompanyAddressEdit:
+                newCard.setCardCompanyAddressShow(cardCompanyAddressEdit.getText().toString());
+                break;
+            case R.id.cardCompanyTelephoneEdit:
+                newCard.setCardCompanyTelephoneShow(cardCompanyTelephoneEdit.getText().toString());
+                break;
+            case R.id.cardCompanyFaxEdit:
+                newCard.setCardCompanyFaxShow(cardCompanyFaxEdit.getText().toString());
+                break;
+            case R.id.cardCompanyWebsiteEdit:
+                newCard.setCardCompanyWebsiteShow(cardCompanyWebsiteEdit.getText().toString());
                 break;
             default:
                 break;

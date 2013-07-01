@@ -66,7 +66,17 @@ public class CardView extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         View v = inflater.inflate(R.layout.cardview_layout, container, false);
+
         cardNameShow = (TextView) v.findViewById(R.id.cardNameShow);
+        cardPositionShow = (TextView) v.findViewById(R.id.cardPositionShow);
+        cardPhoneNumShow = (TextView) v.findViewById(R.id.cardPhoneNumShow);
+        cardEmailShow = (TextView) v.findViewById(R.id.cardEmailShow);
+        cardCompanyLogoShow = (ImageView) v.findViewById(R.id.cardCompanyLogoShow);
+        cardCompanyNameShow = (TextView) v.findViewById(R.id.cardCompanyNameShow);
+        cardCompanyAddressShow = (TextView) v.findViewById(R.id.cardCompanyAddressShow);
+        cardCompanyTelephoneShow = (TextView) v.findViewById(R.id.cardCompanyTelephoneShow);
+        cardCompanyFaxShow = (TextView) v.findViewById(R.id.cardCompanyFaxShow);
+        cardCompanyWebsiteShow = (TextView) v.findViewById(R.id.cardCompanyWebsiteShow);
 
         return v;
     }
