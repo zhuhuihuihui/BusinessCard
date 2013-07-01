@@ -94,7 +94,7 @@
         android:text="传真: 0579-85556163"
         android:id="@+id/cardCompanyFaxShow"
         android:layout_below="@+id/cardCompanyAddressShow"
-        android:layout_toRightOf="@+id/cardEmailShow"/>
+        android:layout_toRightOf="@+id/cardCompanyTelephoneShow"/>
 
     <TextView
         android:layout_width="wrap_content"

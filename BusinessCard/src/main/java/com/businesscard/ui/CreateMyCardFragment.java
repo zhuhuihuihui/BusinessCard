@@ -52,7 +52,7 @@ public class CreateMyCardFragment extends FragmentActivity implements EditTextLi
         //mNum = getArguments() != null ? getArguments().getInt("num") : 1;
 
 
-        newCard = (CardView) getSupportFragmentManager().findFragmentById(R.id.fragment);
+        newCard = (CardView) getSupportFragmentManager().findFragmentById(R.id.mycard_in_create_card_activity);
 
         cardNameEdit = (EditTextWithTextListener) findViewById(R.id.cardNameEdit);
         cardNameEdit.setOnEditTextListener(this);
